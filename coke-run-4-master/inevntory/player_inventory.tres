@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=4 format=3 uid="uid://bogif62bobwad"]
+
+[ext_resource type="Script" uid="uid://cbacnlug1nps" path="res://inevntory/invetory_item.gd" id="1_h55hm"]
+[ext_resource type="Resource" uid="uid://dp7yftym7f7oq" path="res://inevntory/items/coke.tres" id="2_jlgxw"]
+[ext_resource type="Script" uid="uid://brk6c14lglgft" path="res://Inventory.gd" id="3_u3ka0"]
+
+[resource]
+script = ExtResource("3_u3ka0")
+items = Array[ExtResource("1_h55hm")]([ExtResource("2_jlgxw"), ExtResource("2_jlgxw"), ExtResource("2_jlgxw"), null, null])
+metadata/_custom_type_script = "uid://brk6c14lglgft"

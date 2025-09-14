@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var jump_velocity: float = -400.0
 @export var gravity: float = 900.0
 @onready var collision_shape = $CollisionShape2D
-
+@export var inv: Inv
 var is_playing_forced_anim: bool = false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D

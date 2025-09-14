@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://dp7yftym7f7oq"]
+
+[ext_resource type="Script" uid="uid://cbacnlug1nps" path="res://inevntory/invetory_item.gd" id="1_1xlkb"]
+[ext_resource type="Texture2D" uid="uid://cearikkifc4sn" path="res://471-4710170_transparent-diet-coke-bottle-png-coca-cola-pixel-removebg-preview.png" id="2_yv5w7"]
+
+[resource]
+script = ExtResource("1_1xlkb")
+name = "coke"
+texture = ExtResource("2_yv5w7")
+metadata/_custom_type_script = "uid://cbacnlug1nps"

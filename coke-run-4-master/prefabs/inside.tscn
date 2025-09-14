@@ -1,21 +1,21 @@
 [gd_scene load_steps=20 format=3 uid="uid://be5qoiott35hg"]
 
-[ext_resource type="PackedScene" uid="uid://cbsip8oj6igcn" path="res://prefabs/delivery_boy.tscn" id="1_lldna"]
-[ext_resource type="Script" uid="uid://r2pg17w0e3i2" path="res://scripts/inside.gd" id="1_m6cjh"]
-[ext_resource type="Texture2D" uid="uid://bnc0y82ucl7di" path="res://icon.svg" id="2_l10kx"]
-[ext_resource type="PackedScene" uid="uid://by6v4564is841" path="res://prefabs/fridge.tscn" id="3_nq1gs"]
-[ext_resource type="Script" uid="uid://du6sb6cs2bcme" path="res://scripts/door.gd" id="4_1h31g"]
-[ext_resource type="Script" uid="uid://b8n3cwd03l83o" path="res://scripts/canvas_layer.gd" id="5_ufyb6"]
-[ext_resource type="Script" uid="uid://b464h1wuhrgqa" path="res://scripts/area_2d_3.gd" id="6_7d44f"]
-[ext_resource type="Texture2D" uid="uid://c3i6hi7rfsyf5" path="res://oval office door.png" id="7_ab67q"]
-[ext_resource type="Script" uid="uid://dfc5jr7b36jbd" path="res://scripts/canvas_layer_2.gd" id="9_7w7nv"]
-[ext_resource type="Script" uid="uid://duxlfre1waqfw" path="res://scripts/coke.gd" id="10_btxns"]
-[ext_resource type="Texture2D" uid="uid://cearikkifc4sn" path="res://471-4710170_transparent-diet-coke-bottle-png-coca-cola-pixel-removebg-preview.png" id="11_2l53a"]
-[ext_resource type="Script" uid="uid://d2ceglpgvs68s" path="res://scripts/pizza_slice.gd" id="12_v24ba"]
-[ext_resource type="Texture2D" uid="uid://bbt60ef7jxba4" path="res://pizza slice.png" id="13_xxnk8"]
+[ext_resource type="Script" uid="uid://r2pg17w0e3i2" path="res://scripts/inside.gd" id="1_2vjet"]
+[ext_resource type="PackedScene" uid="uid://cbsip8oj6igcn" path="res://prefabs/delivery_boy.tscn" id="2_a56so"]
+[ext_resource type="Texture2D" uid="uid://bnc0y82ucl7di" path="res://icon.svg" id="3_humxc"]
+[ext_resource type="PackedScene" uid="uid://by6v4564is841" path="res://prefabs/fridge.tscn" id="4_vv4hl"]
+[ext_resource type="Script" uid="uid://du6sb6cs2bcme" path="res://scripts/door.gd" id="5_iac14"]
+[ext_resource type="Texture2D" uid="uid://c3i6hi7rfsyf5" path="res://oval office door.png" id="6_g4jv6"]
+[ext_resource type="Script" uid="uid://b8n3cwd03l83o" path="res://scripts/canvas_layer.gd" id="7_40uk1"]
+[ext_resource type="Script" uid="uid://b464h1wuhrgqa" path="res://scripts/area_2d_3.gd" id="8_gqyi5"]
+[ext_resource type="Script" uid="uid://dfc5jr7b36jbd" path="res://scripts/canvas_layer_2.gd" id="9_kvelu"]
+[ext_resource type="Script" uid="uid://duxlfre1waqfw" path="res://scripts/coke.gd" id="10_lrjr5"]
+[ext_resource type="Texture2D" uid="uid://cearikkifc4sn" path="res://471-4710170_transparent-diet-coke-bottle-png-coca-cola-pixel-removebg-preview.png" id="11_jcbvr"]
+[ext_resource type="Script" uid="uid://d2ceglpgvs68s" path="res://scripts/pizza_slice.gd" id="12_8k4j7"]
+[ext_resource type="Texture2D" uid="uid://bbt60ef7jxba4" path="res://pizza slice.png" id="13_l2gxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1ut0"]
-texture = ExtResource("2_l10kx")
+texture = ExtResource("3_humxc")
 texture_region_size = Vector2i(128, 128)
 use_texture_padding = false
 0:0/0 = 0
@@ -102,9 +102,9 @@ size = Vector2(23, 32)
 size = Vector2(59, 54)
 
 [node name="inside" type="Node2D"]
-script = ExtResource("1_m6cjh")
+script = ExtResource("1_2vjet")
 
-[node name="Delivery boy" parent="." instance=ExtResource("1_lldna")]
+[node name="Delivery boy" parent="." instance=ExtResource("2_a56so")]
 position = Vector2(-358, 65)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -112,18 +112,18 @@ tile_set = SubResource("TileSet_235k6")
 format = 2
 layer_0/tile_data = PackedInt32Array(131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 131068, 0, 0, 131067, 0, 0, 131066, 0, 0, 131065, 0, 0, 131064, 0, 0, 131063, 0, 0, 131062, 0, 0, 131061, 0, 0, 131060, 0, 0, 131059, 0, 0, 131058, 0, 0, 131057, 0, 0, 131056, 0, 0, 131055, 0, 0, 131054, 0, 0, 131053, 0, 0, 131052, 0, 0, 131051, 0, 0, 131050, 0, 0, 131049, 0, 0)
 
-[node name="fridge" parent="." instance=ExtResource("3_nq1gs")]
+[node name="fridge" parent="." instance=ExtResource("4_vv4hl")]
 position = Vector2(548, 140)
 
 [node name="outside door" type="Area2D" parent="."]
 position = Vector2(1885, 9)
 collision_layer = 0
-script = ExtResource("4_1h31g")
+script = ExtResource("5_iac14")
 
 [node name="Sprite2D" type="Sprite2D" parent="outside door"]
 position = Vector2(-2782, -37)
 scale = Vector2(5.84, 5.79)
-texture = ExtResource("7_ab67q")
+texture = ExtResource("6_g4jv6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outside door"]
 position = Vector2(-2789, -41)
@@ -132,7 +132,7 @@ shape = SubResource("RectangleShape2D_v503f")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 offset = Vector2(10, 10)
 transform = Transform2D(1, 0, 0, 1, 10, 10)
-script = ExtResource("5_ufyb6")
+script = ExtResource("7_40uk1")
 
 [node name="TaskLabel" type="Label" parent="CanvasLayer"]
 offset_right = 40.0
@@ -141,17 +141,17 @@ metadata/_edit_use_anchors_ = true
 
 [node name="oval office door" type="Area2D" parent="."]
 position = Vector2(-1, 0)
-script = ExtResource("6_7d44f")
+script = ExtResource("8_gqyi5")
 
 [node name="Sprite2D" type="Sprite2D" parent="oval office door"]
 position = Vector2(1273, -28)
 scale = Vector2(5.84, 5.79)
-texture = ExtResource("7_ab67q")
+texture = ExtResource("6_g4jv6")
 
 [node name="Sprite2D" type="Sprite2D" parent="oval office door/Sprite2D"]
 position = Vector2(1273, -28)
 scale = Vector2(5.84, 5.79)
-texture = ExtResource("7_ab67q")
+texture = ExtResource("6_g4jv6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="oval office door"]
 position = Vector2(1265, -31)
@@ -160,7 +160,7 @@ shape = SubResource("RectangleShape2D_v83k7")
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 offset = Vector2(10, 10)
 transform = Transform2D(1, 0, 0, 1, 10, 10)
-script = ExtResource("9_7w7nv")
+script = ExtResource("9_kvelu")
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer2"]
 offset_right = 40.0
@@ -169,7 +169,7 @@ offset_bottom = 23.0
 [node name="coke" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 position = Vector2(-571, -89)
 collision_layer = 0
-script = ExtResource("10_btxns")
+script = ExtResource("10_lrjr5")
 sprite = NodePath("Sprite2D")
 metadata/_edit_group_ = true
 
@@ -177,7 +177,7 @@ metadata/_edit_group_ = true
 z_index = 1
 position = Vector2(2.00012, 2)
 scale = Vector2(0.178487, 0.0755518)
-texture = ExtResource("11_2l53a")
+texture = ExtResource("11_jcbvr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coke"]
 position = Vector2(1.5, 0)
@@ -186,7 +186,7 @@ shape = SubResource("RectangleShape2D_el4mf")
 [node name="CanvasLayer" type="CanvasLayer" parent="coke"]
 offset = Vector2(10, 10)
 transform = Transform2D(1, 0, 0, 1, 10, 10)
-script = ExtResource("5_ufyb6")
+script = ExtResource("7_40uk1")
 
 [node name="TaskLabel" type="Label" parent="coke/CanvasLayer"]
 offset_right = 40.0
@@ -194,14 +194,14 @@ offset_bottom = 23.0
 
 [node name="pizza_slice" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 position = Vector2(-62, -21)
-script = ExtResource("12_v24ba")
+script = ExtResource("12_8k4j7")
 sprite = NodePath("Sprite2D")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="pizza_slice"]
 position = Vector2(-515, 70)
 scale = Vector2(6.35, 6.49)
-texture = ExtResource("13_xxnk8")
+texture = ExtResource("13_l2gxe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pizza_slice"]
 position = Vector2(-636.5, -55)

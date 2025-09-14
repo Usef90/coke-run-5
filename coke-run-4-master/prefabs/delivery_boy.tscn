@@ -1,19 +1,13 @@
-[gd_scene load_steps=59 format=3 uid="uid://cbsip8oj6igcn"]
+[gd_scene load_steps=51 format=3 uid="uid://cbsip8oj6igcn"]
 
 [ext_resource type="Script" uid="uid://b42qqo5f1js8l" path="res://scripts/delivery_boy.gd" id="1_dgc07"]
 [ext_resource type="Texture2D" uid="uid://d2bj6rrb04waq" path="res://craftpix-net-913026-free-gangster-pixel-character-sprite-sheets-pack/Gangsters_3/Attack.png" id="2_bou03"]
+[ext_resource type="Resource" uid="uid://bogif62bobwad" path="res://inevntory/player_inventory.tres" id="2_ij501"]
 [ext_resource type="Texture2D" uid="uid://byn7sqla8xfl1" path="res://craftpix-net-913026-free-gangster-pixel-character-sprite-sheets-pack/Gangsters_3/Walk.png" id="2_p0p1i"]
 [ext_resource type="Texture2D" uid="uid://dh3q1epte3san" path="res://craftpix-net-913026-free-gangster-pixel-character-sprite-sheets-pack/Gangsters_3/Idle_2.png" id="2_vsx3r"]
 [ext_resource type="Texture2D" uid="uid://xpef3we43fy" path="res://craftpix-net-913026-free-gangster-pixel-character-sprite-sheets-pack/Gangsters_3/Jump.png" id="3_cmd4a"]
 [ext_resource type="Script" uid="uid://bjljcwdknct1e" path="res://scripts/label.gd" id="3_yg1h4"]
-[ext_resource type="Texture2D" uid="uid://cvghts4vn5nfa" path="res://frame.png" id="6_kgbds"]
-[ext_resource type="Texture2D" uid="uid://bbt60ef7jxba4" path="res://pizza slice.png" id="6_q0vc0"]
-[ext_resource type="Script" uid="uid://ceakkfhkhc08d" path="res://scripts/has_coke_inventory.gd" id="6_rkctw"]
-[ext_resource type="Texture2D" uid="uid://cearikkifc4sn" path="res://471-4710170_transparent-diet-coke-bottle-png-coca-cola-pixel-removebg-preview.png" id="7_e1d7n"]
-[ext_resource type="Script" uid="uid://7ujkeg84hdxc" path="res://scripts/coke_inventory.gd" id="10_3dmkh"]
-[ext_resource type="Texture2D" uid="uid://br2gbf8da80cf" path="res://cash.png" id="10_6k60s"]
-[ext_resource type="Script" uid="uid://c0hjdu13jua1x" path="res://scripts/cash.gd" id="11_ky806"]
-[ext_resource type="Script" uid="uid://cqe4stipirbnc" path="res://scripts/pizza_slice_inventory.gd" id="12_xpkxp"]
+[ext_resource type="PackedScene" uid="uid://bcc428uueotl4" path="res://inevntory/inv_ui.tscn" id="8_8goda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wylbu"]
 size = Vector2(80, 274)
@@ -317,16 +311,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_sp21f"]
 radius = 107.355
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x16aw"]
-size = Vector2(85.75, 80.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxhar"]
-size = Vector2(99.9999, 102.5)
-
 [node name="Delivery boy" type="CharacterBody2D" groups=["\"player\""]]
 z_index = 21
 position = Vector2(-68, 5)
 script = ExtResource("1_dgc07")
+inv = ExtResource("2_ij501")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(119, -73)
@@ -372,85 +361,13 @@ text = "	"
 script = ExtResource("3_yg1h4")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-offset = Vector2(1075, 20)
-transform = Transform2D(1, 0, 0, 1, 1075, 20)
-script = ExtResource("6_rkctw")
+offset = Vector2(1120, -4)
+transform = Transform2D(1, 0, 0, 1, 1120, -4)
 
-[node name="frame1" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(6.5, 39.5)
-scale = Vector2(0.87, 0.81)
-texture = ExtResource("6_kgbds")
-
-[node name="coke" type="Sprite2D" parent="CanvasLayer2"]
-z_index = 1
-position = Vector2(5.99996, 37.5)
-scale = Vector2(0.198582, 0.089983)
-texture = ExtResource("7_e1d7n")
-script = ExtResource("10_3dmkh")
-
-[node name="Area2D" type="Area2D" parent="CanvasLayer2/coke"]
-position = Vector2(-30.214, -416.745)
-scale = Vector2(5.0357, 11.1132)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/coke/Area2D"]
-position = Vector2(6.125, 39.25)
-shape = SubResource("RectangleShape2D_x16aw")
-
-[node name="frame2" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(6.99996, 139)
-scale = Vector2(0.870001, 0.8)
-texture = ExtResource("6_kgbds")
-
-[node name="PizzaSlice" type="Sprite2D" parent="CanvasLayer2"]
-position = Vector2(111, 242)
-rotation = 0.240256
-scale = Vector2(6.45665, 4.06749)
-texture = ExtResource("6_q0vc0")
-script = ExtResource("12_xpkxp")
-
-[node name="Area2D" type="Area2D" parent="CanvasLayer2/PizzaSlice"]
-position = Vector2(-19.4407, -18.5113)
-rotation = -0.370891
-scale = Vector2(0.140423, 0.193294)
-skew = 0.217764
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/PizzaSlice/Area2D"]
-position = Vector2(0.574759, -1.25)
-shape = SubResource("RectangleShape2D_hxhar")
-
-[node name="coke_amount" type="Label" parent="CanvasLayer2"]
-anchors_preset = -1
-anchor_left = 0.049
-anchor_right = 0.049
-offset_left = -11.448
-offset_top = -13.0
-offset_right = 28.552
-offset_bottom = 31.0
-
-[node name="pizza_amount" type="Label" parent="CanvasLayer2"]
-offset_left = 43.0
-offset_top = 85.0
-offset_right = 83.0
-offset_bottom = 131.0
-
-[node name="CanvasLayer3" type="CanvasLayer" parent="."]
-offset = Vector2(1150, 600)
-transform = Transform2D(1, 0, 0, 1, 1150, 600)
-script = ExtResource("11_ky806")
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer3"]
-position = Vector2(-68, 5)
-texture = ExtResource("10_6k60s")
-
-[node name="cash" type="Label" parent="CanvasLayer3"]
-offset_left = -64.0
-offset_top = -39.0
-offset_right = -33.0
-offset_bottom = -16.0
-text = "2"
+[node name="Inv_ui" parent="CanvasLayer2" instance=ExtResource("8_8goda")]
+offset_left = -68.0
+offset_top = 6.0
+offset_right = 31.0
+offset_bottom = 517.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="mouse_entered" from="CanvasLayer2/coke/Area2D" to="CanvasLayer2/coke" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer2/coke/Area2D" to="CanvasLayer2/coke" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer2/PizzaSlice/Area2D" to="CanvasLayer2/PizzaSlice" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer2/PizzaSlice/Area2D" to="CanvasLayer2/PizzaSlice" method="_on_area_2d_mouse_exited"]
