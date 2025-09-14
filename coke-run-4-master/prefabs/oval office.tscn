@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw07c16l8ihri"]
+
+[ext_resource type="Texture2D" uid="uid://bnc0y82ucl7di" path="res://icon.svg" id="1_04uip"]
+[ext_resource type="Script" uid="uid://cnp6y4go72qhr" path="res://scripts/sprite_2d.gd" id="2_aipd8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(585.5, 312)
+scale = Vector2(10.1484, 5.875)
+texture = ExtResource("1_04uip")
+script = ExtResource("2_aipd8")
+
+[node name="ResultLabel" type="Label" parent="CanvasLayer/Sprite2D"]
+offset_left = -30.0
+offset_top = -61.0
+offset_right = 30.0
+offset_bottom = -38.0

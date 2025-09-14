@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cxnqdharyhtia"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 33.0
+offset_right = 311.0
+offset_bottom = 90.0
+text = "123456789"

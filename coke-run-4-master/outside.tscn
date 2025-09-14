@@ -1,0 +1,376 @@
+[gd_scene load_steps=42 format=3 uid="uid://dbngn00v3jvmt"]
+
+[ext_resource type="Texture2D" uid="uid://bnc0y82ucl7di" path="res://icon.svg" id="1_ev4mg"]
+[ext_resource type="PackedScene" uid="uid://cbsip8oj6igcn" path="res://prefabs/delivery_boy.tscn" id="2_v42a8"]
+[ext_resource type="Script" uid="uid://drrimgiy5f2iy" path="res://scripts/push.gd" id="3_tgiy4"]
+[ext_resource type="Texture2D" uid="uid://b7l2850flmvem" path="res://craftpix-net-724171-free-homeless-character-sprite-sheets-pixel-art/Homeless_1/Dead.png" id="4_706yc"]
+[ext_resource type="Texture2D" uid="uid://dfxe8dh3k3cti" path="res://craftpix-net-724171-free-homeless-character-sprite-sheets-pixel-art/Homeless_1/Idle.png" id="5_1hvtp"]
+[ext_resource type="Texture2D" uid="uid://dd7c1bcdtujwo" path="res://craftpix-net-724171-free-homeless-character-sprite-sheets-pixel-art/Homeless_1/Walk.png" id="6_jb318"]
+[ext_resource type="Script" uid="uid://d0hc37oahiyly" path="res://scripts/remove_collision_shape.gd" id="7_e6xy3"]
+[ext_resource type="PackedScene" uid="uid://x5jdxr8f4fsn" path="res://homeless_2.tscn" id="8_vqdix"]
+[ext_resource type="PackedScene" uid="uid://bbiyu8foupdxf" path="res://school_girl.tscn" id="14_2iajd"]
+[ext_resource type="Script" uid="uid://duxlfre1waqfw" path="res://scripts/coke.gd" id="15_110lh"]
+[ext_resource type="Texture2D" uid="uid://cearikkifc4sn" path="res://471-4710170_transparent-diet-coke-bottle-png-coca-cola-pixel-removebg-preview.png" id="15_na8oj"]
+[ext_resource type="Script" uid="uid://dfc5jr7b36jbd" path="res://scripts/canvas_layer_2.gd" id="17_p3ncw"]
+[ext_resource type="Script" uid="uid://b8n3cwd03l83o" path="res://scripts/canvas_layer.gd" id="17_paip0"]
+[ext_resource type="Script" uid="uid://drjmxfg83wm3m" path="res://scripts/coke2.gd" id="17_ta17c"]
+[ext_resource type="Texture2D" uid="uid://c3i6hi7rfsyf5" path="res://oval office door.png" id="18_qqxle"]
+[ext_resource type="Script" uid="uid://djvrleg5bd5ma" path="res://scripts/area_2d.gd" id="19_nv13f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgnev"]
+texture = ExtResource("1_ev4mg")
+texture_region_size = Vector2i(128, 128)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t0e56"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_pgnev")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2161"]
+size = Vector2(23, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6kdp"]
+atlas = ExtResource("4_706yc")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdbnb"]
+atlas = ExtResource("4_706yc")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ljef"]
+atlas = ExtResource("4_706yc")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc8wo"]
+atlas = ExtResource("4_706yc")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8bxr"]
+atlas = ExtResource("5_1hvtp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wijys"]
+atlas = ExtResource("5_1hvtp")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mot4"]
+atlas = ExtResource("5_1hvtp")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l32i"]
+atlas = ExtResource("5_1hvtp")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlxld"]
+atlas = ExtResource("5_1hvtp")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06mks"]
+atlas = ExtResource("5_1hvtp")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo5k3"]
+atlas = ExtResource("6_jb318")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ds0v"]
+atlas = ExtResource("6_jb318")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eg40"]
+atlas = ExtResource("6_jb318")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nismq"]
+atlas = ExtResource("6_jb318")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27h07"]
+atlas = ExtResource("6_jb318")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_handk"]
+atlas = ExtResource("6_jb318")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvbnn"]
+atlas = ExtResource("6_jb318")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omhdy"]
+atlas = ExtResource("6_jb318")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wjwut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6kdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdbnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ljef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wc8wo")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8bxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wijys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mot4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8l32i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlxld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06mks")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo5k3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ds0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eg40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nismq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27h07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_handk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvbnn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omhdy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_id5sk"]
+size = Vector2(52, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwy4d"]
+size = Vector2(23, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_826gw"]
+size = Vector2(135.5, 311)
+
+[node name="outside" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_t0e56")
+format = 2
+layer_0/tile_data = PackedInt32Array(131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 131068, 0, 0, 131067, 0, 0, 131066, 0, 0, 131065, 0, 0, 131064, 0, 0, 131063, 0, 0, 131062, 0, 0, 131061, 0, 0, 131060, 0, 0, 131059, 0, 0, 131058, 0, 0, 131057, 0, 0, 131056, 0, 0, 131055, 0, 0, 131054, 0, 0, 131053, 0, 0, 131052, 0, 0, 131051, 0, 0, 131050, 0, 0, 131049, 0, 0)
+
+[node name="Delivery boy" parent="." instance=ExtResource("2_v42a8")]
+position = Vector2(190, 42)
+
+[node name="homeless1" type="Area2D" parent="."]
+position = Vector2(-483, 59)
+collision_layer = 0
+script = ExtResource("3_tgiy4")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="homeless1"]
+position = Vector2(13.5, 1.5)
+shape = SubResource("RectangleShape2D_x2161")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="homeless1"]
+position = Vector2(32, -44)
+scale = Vector2(1.4375, 1.76563)
+sprite_frames = SubResource("SpriteFrames_wjwut")
+animation = &"walk"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="homeless1"]
+position = Vector2(-1, -63)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="homeless1/CharacterBody2D"]
+position = Vector2(15, 72.5)
+shape = SubResource("RectangleShape2D_id5sk")
+script = ExtResource("7_e6xy3")
+
+[node name="homeless2" parent="." instance=ExtResource("8_vqdix")]
+position = Vector2(-228, 52)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("14_2iajd")]
+position = Vector2(-860, 25)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("14_2iajd")]
+position = Vector2(-991, 46)
+
+[node name="coke" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(-1958, 65)
+collision_layer = 0
+script = ExtResource("15_110lh")
+sprite = NodePath("Sprite2D")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="coke"]
+z_index = 1
+position = Vector2(2.00012, 2)
+scale = Vector2(0.178487, 0.0755518)
+texture = ExtResource("15_na8oj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coke"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_wwy4d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="coke"]
+offset = Vector2(10, 10)
+transform = Transform2D(1, 0, 0, 1, 10, 10)
+script = ExtResource("17_paip0")
+
+[node name="TaskLabel" type="Label" parent="coke/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+offset = Vector2(10, 10)
+transform = Transform2D(1, 0, 0, 1, 10, 10)
+script = ExtResource("17_p3ncw")
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer2"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("19_nv13f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(523.5, -20)
+scale = Vector2(4.41, 5.61)
+texture = ExtResource("18_qqxle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(517.25, -20)
+shape = SubResource("RectangleShape2D_826gw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1939, 24)
+scale = Vector2(2.14844, 1.59375)
+texture = ExtResource("1_ev4mg")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -17.2218
+offset_top = -62.7451
+offset_right = 22.7782
+offset_bottom = -39.7451
+text = "7/11"
+
+[node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(-2108, 51)
+script = ExtResource("17_ta17c")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+z_index = 1
+position = Vector2(-78.9999, 5)
+scale = Vector2(0.178487, 0.0755518)
+texture = ExtResource("15_na8oj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-81, 9)
+shape = SubResource("RectangleShape2D_wwy4d")
+
+[connection signal="area_entered" from="homeless1" to="homeless1" method="_on_area_entered"]
+[connection signal="area_exited" from="homeless1" to="homeless1" method="_on_area_exited"]
+[connection signal="area_entered" from="coke" to="coke" method="_on_area_entered"]
+[connection signal="area_exited" from="coke" to="coke" method="_on_area_exited"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="Area2D2" to="Area2D2" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D2" to="Area2D2" method="_on_area_exited"]

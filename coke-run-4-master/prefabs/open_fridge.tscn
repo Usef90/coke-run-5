@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://mv4858wjpqel"]
+
+[ext_resource type="Texture2D" uid="uid://bnc0y82ucl7di" path="res://icon.svg" id="1_nnln5"]
+[ext_resource type="Script" uid="uid://wglyjyo25a11" path="res://scripts/open_fridge.gd" id="2_tweyq"]
+
+[node name="open_fridge" type="Sprite2D"]
+position = Vector2(467, 313)
+scale = Vector2(3.92187, 4.78906)
+texture = ExtResource("1_nnln5")
+script = ExtResource("2_tweyq")
